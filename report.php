@@ -27,9 +27,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
         /* Get oauth2 token using a POST request */
         $curlPostToken = curl_init();
 
-        $tenantId = 'd00023c8-9bcd-4a89-a43f-13b6661dad71';
-        $clientId='430a311c-b9e2-4a3f-a241-1829036cad5a';
-        $clientSecretId='ZnO8Q~RsneZG3TRXiIf.9TU4lSzfmL.dfaIc7aS9';
+        $tenantId = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx';
+        $clientId='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx';
+        $clientSecretId='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
         curl_setopt_array($curlPostToken, array(
             CURLOPT_URL => "https://login.microsoftonline.com/$tenantId/oauth2/token",            
             CURLOPT_RETURNTRANSFER => true,
@@ -58,9 +58,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
         $tokenResult = json_decode($tokenResponse, true);
         $token = $tokenResult["access_token"];
         $bearerToken = "Bearer "  . ' ' .  $token;
-        $ReportId = '31dd7951-3874-452c-8d0a-93c37e7a5e2b';
-        $workspace = '09931810-ca17-4659-859f-fa293f35dc00';
-        $datasetId ="27b71be3-34d0-4b1c-8cbf-69a14cbeb582";
+        $ReportId = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx';
+        $workspace = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx';
+        $datasetId ="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";
         /* Use the token to get an embedded URL using a GET request */
         
         $post_params = array(
